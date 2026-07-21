@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Menu Événement</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Administration</h1>
+            <a href="index.html" class="link">Voir le menu invité</a>
+        </header>
+
+        <section class="config-section">
+            <h2>Catégories</h2>
+            <div id="categories-list" class="tag-list"></div>
+            <div class="add-row">
+                <input type="text" id="new-category" placeholder="Nom (ex: VIP, VVIP)">
+                <button id="add-category" class="btn btn-small">Ajouter</button>
+            </div>
+        </section>
+
+        <section class="config-section">
+            <h2>Jours</h2>
+            <div id="days-list" class="tag-list"></div>
+            <div class="add-row">
+                <input type="text" id="new-day" placeholder="Nom (ex: Jour 1)">
+                <button id="add-day" class="btn btn-small">Ajouter</button>
+            </div>
+        </section>
+
+        <section class="config-section">
+            <h2>Périodes</h2>
+            <div id="periods-list" class="tag-list"></div>
+            <div class="add-row">
+                <input type="text" id="new-period" placeholder="Nom (ex: Matin)">
+                <button id="add-period" class="btn btn-small">Ajouter</button>
+            </div>
+        </section>
+
+        <section class="config-section">
+            <h2>Menus actifs (par catégorie)</h2>
+            <p class="hint">Chaque catégorie peut avoir son propre menu actif en même temps. Le lien est à partager (QR code).</p>
+            <div id="activation-panel"></div>
+        </section>
+
+        <section class="menus-section">
+            <h2>Tous les menus <button id="seed-test" class="btn btn-small" style="margin-left:12px;font-size:0.7rem;">&#8635; Remplir données test</button></h2>
+            <p class="hint">Remplis chaque case — ligne 1 = en-têtes, lignes suivantes = données (CSV)</p>
+            <div id="menus-grid"></div>
+        </section>
+
+        <div id="toast" class="toast"></div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
